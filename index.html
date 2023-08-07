@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Nombres de Dominio</title>
+</head>
+<body>
+    <script>
+        var pronoun = ['el', 'nuestro'];
+        var adj = ['genial', 'grande'];
+        var noun = ['corredor', 'mapache'];
+
+        
+        function generarNombresDominio(pronombres, adjetivos, sustantivos) {
+            var nombresDominio = [];
+
+            for (var i = 0; i < pronombres.length; i++) {
+                for (var j = 0; j < adjetivos.length; j++) {
+                    for (var k = 0; k < sustantivos.length; k++) {
+                        var nombreDominio = pronombres[i] + adjetivos[j] + sustantivos[k];
+                        nombresDominio.push(nombreDominio);
+                    }
+                }
+            }
+
+            return nombresDominio;
+        }
+
+       
+        var nombresDominioGenerados = generarNombresDominio(pronoun, adj, noun);
+
+        
+        console.log(nombresDominioGenerados);
+    </script>
+</body>
+</html>
